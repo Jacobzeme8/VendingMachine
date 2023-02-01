@@ -1,13 +1,21 @@
 
 import { appState } from "../AppState.js";
-export class VendingService{
-  static purchaseFood(name) {
+
+
+class VendingService{
+  purchaseFood (name) {
     let money = appState.money
-    let foundFood = appState.food.find(f => f.name = name)
+    let food = appState.food
+    let foundFood = food.find(f => f.name == name)
     if(money >= foundFood.price ){
-      money -= foundFood.price
+      appState.money -= foundFood.price
+      console.log(appState.money);
     }
   }
-  
+  addMoney(){
+    appState.money += .25
+  }
   
 }
+
+export const vendingService = new VendingService()

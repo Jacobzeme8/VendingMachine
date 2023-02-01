@@ -23,13 +23,19 @@
       </a>
     </nav>
     <div class="d-flex justify-content-end">
-      <button onclick="app.vendingController.Testing()" class="btn btn-danger m-3">More Mons</button>
+      <button onclick="app.vendingController.addMoney()" class="btn btn-danger m-3">More Mons</button>
       <p id="money" class="m-3">Money: 32$</p>
     </div>
   </header>
   <main>
     <div class="container-fluid">
-      <div id="app"class="row mt-4 d-flex justify-content-evenly">
+      <!-- <div class="col-4 text-center pb-4">
+        <img class="img-fluid vending-image" src="${f.pic}" alt="">
+        <h3>Taco</h3>
+        <h4>Price: 3</h4>
+        <button onclick="app.vendingController.purchaseFood()" >Purchase</button>
+      </div> -->
+      <div id="vending"class="row mt-4 d-flex justify-content-evenly">
         <div class="col-4 text-center pb-4">
           <img class="img-fluid" src="https://via.placeholder.com/200" alt="">
           <h3>Item Name</h3>

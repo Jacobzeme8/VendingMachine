@@ -12,16 +12,16 @@ class AppState extends EventEmitter {
   money = 20;
   /** @type {import('./Models/Vending').Vending[]} */
   food = [
-    {
+   new Vending( {
       name: "Taco",
       price: 3,
       pic: "https://www.tacobueno.com/assets/food/tacos/Taco_Crispy_Beef_990x725.jpg"
-    },
-    {
+    }),
+   new Vending( {
       name: "Burrito",
       price: 4.5,
       pic: "https://cdn.britannica.com/13/234013-050-73781543/rice-and-chorizo-burrito.jpg"
-    }
+    })
   ]
 
 }
